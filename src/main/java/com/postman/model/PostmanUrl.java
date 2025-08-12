@@ -1,10 +1,9 @@
-package com.postman.converter.model;
+package com.postman.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
 import org.apache.commons.collections4.CollectionUtils;
-import org.apache.commons.collections4.MapUtils;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.List;
@@ -33,7 +32,6 @@ public class PostmanUrl {
     public boolean hasPath() {
         return CollectionUtils.isNotEmpty(path);
     }
-    public boolean hasVariable() {
-        return MapUtils.isNotEmpty(variable);
-    }
+
+
 }

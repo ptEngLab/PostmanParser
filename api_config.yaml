@@ -1,0 +1,288 @@
+api_config:
+  lr_01_numbertowords:
+    name: "01_numbertowords"
+    method: "POST"
+    url: "https://www.dataaccess.com/webservicesserver/NumberConversion.wso"
+    headers:
+      Content-Type: "text/xml; charset=utf-8"
+    payload: |-
+      <?xml version="1.0" encoding="utf-8"?>
+      <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+          <soap:Body>
+              <NumberToWords xmlns="http://www.dataaccess.com/webservicesserver/">
+                  <ubiNum>500</ubiNum>
+              </NumberToWords>
+          </soap:Body>
+      </soap:Envelope>
+  lr_02_numbertodollars:
+    name: "02_numbertodollars"
+    method: "POST"
+    url: "https://www.dataaccess.com/webservicesserver/NumberConversion.wso"
+    headers:
+      Content-Type: "text/xml; charset=utf-8"
+    payload: |-
+      <?xml version="1.0" encoding="utf-8"?>
+      <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+        <soap:Body>
+          <NumberToDollars xmlns="http://www.dataaccess.com/webservicesserver/">
+            <dNum>500</dNum>
+          </NumberToDollars>
+        </soap:Body>
+      </soap:Envelope>
+  lr_03_add:
+    name: "03_add"
+    method: "POST"
+    url: "https://www.dataaccess.com/webservicesserver/NumberConversion.wso"
+    headers:
+      Content-Type: "text/xml; charset=utf-8"
+    payload: |-
+      <?xml version="1.0" encoding="utf-8"?>
+      <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+        <soap:Body>
+          <NumberToWords xmlns="http://www.dataaccess.com/webservicesserver/">
+            <ubiNum>500</ubiNum>
+          </NumberToWords>
+        </soap:Body>
+      </soap:Envelope>
+  lr_04_numbertodollars:
+    name: "04_numbertodollars"
+    method: "POST"
+    url: "https://www.dataaccess.com/webservicesserver/NumberConversion.wso"
+    headers:
+      Content-Type: "text/xml; charset=utf-8"
+    payload: |-
+      <?xml version="1.0" encoding="utf-8"?>
+      <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+        <soap:Body>
+          <NumberToDollars xmlns="http://www.dataaccess.com/webservicesserver/">
+            <dNum>500</dNum>
+          </NumberToDollars>
+        </soap:Body>
+      </soap:Envelope>
+  lr_05_divide:
+    name: "05_divide"
+    method: "POST"
+    url: "http://www.dneonline.com/calculator.asmx"
+    headers:
+      Content-Type: "text/xml; charset=utf-8"
+      SOAPAction: "http://tempuri.org/Divide"
+    payload: |-
+      <?xml version="1.0" encoding="utf-8"?>
+      <soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+        <soap:Body>
+          <Divide xmlns="http://tempuri.org/">
+            <intA>5</intA>
+            <intB>5</intB>
+          </Divide>
+        </soap:Body>
+      </soap:Envelope>
+  lr_06_multiply:
+    name: "06_multiply"
+    method: "POST"
+    url: "http://www.dneonline.com/calculator.asmx"
+    headers:
+      Content-Type: "text/xml; charset=utf-8"
+      SOAPAction: "http://tempuri.org/Multiply"
+    payload: |-
+      <?xml version="1.0" encoding="utf-8"?>
+      <soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+        <soap:Body>
+          <Multiply xmlns="http://tempuri.org/">
+            <intA>5</intA>
+            <intB>5</intB>
+          </Multiply>
+        </soap:Body>
+      </soap:Envelope>
+  lr_07_subtract:
+    name: "07_subtract"
+    method: "POST"
+    url: "http://www.dneonline.com/calculator.asmx"
+    headers:
+      Content-Type: "text/xml; charset=utf-8"
+      SOAPAction: "http://tempuri.org/Subtract"
+    payload: |-
+      <?xml version="1.0" encoding="utf-8"?>
+      <soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+        <soap:Body>
+          <Subtract xmlns="http://tempuri.org/">
+            <intA>5</intA>
+            <intB>5</intB>
+          </Subtract>
+        </soap:Body>
+      </soap:Envelope>
+  lr_08_list_of_continents_by_name:
+    name: "08_list_of_continents_by_name"
+    method: "POST"
+    url: "http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso"
+    headers:
+      Content-Type: "text/xml; charset=utf-8"
+    payload: |-
+      <?xml version="1.0" encoding="utf-8"?>
+      <soap12:Envelope xmlns:soap12="http://www.w3.org/2003/05/soap-envelope">
+        <soap12:Body>
+          <ListOfContinentsByName xmlns="http://www.oorsprong.org/websamples.countryinfo">
+          </ListOfContinentsByName>
+        </soap12:Body>
+      </soap12:Envelope>
+  lr_09_list_of_countries_by_name:
+    name: "09_list_of_countries_by_name"
+    method: "POST"
+    url: "http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso"
+    headers:
+      Content-Type: "text/xml; charset=utf-8"
+    payload: |-
+      <?xml version="1.0" encoding="utf-8"?>
+      <soap12:Envelope xmlns:soap12="http://www.w3.org/2003/05/soap-envelope">
+        <soap12:Body>
+          <ListOfCountryNamesByName xmlns="http://www.oorsprong.org/websamples.countryinfo">
+          </ListOfCountryNamesByName>
+        </soap12:Body>
+      </soap12:Envelope>
+  lr_10_captial_city_for_a_country:
+    name: "10_captial_city_for_a_country"
+    method: "POST"
+    url: "http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso"
+    headers:
+      Content-Type: "text/xml; charset=utf-8"
+    payload: |-
+      <?xml version="1.0" encoding="utf-8"?>
+      <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+        <soap:Body>
+          <CapitalCity xmlns="http://www.oorsprong.org/websamples.countryinfo">
+            <sCountryISOCode>US</sCountryISOCode>
+          </CapitalCity>
+        </soap:Body>
+      </soap:Envelope>
+  lr_11_currency_for_a_country:
+    name: "11_currency_for_a_country"
+    method: "POST"
+    url: "http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso"
+    headers:
+      Content-Type: "text/xml; charset=utf-8"
+    payload: |-
+      <?xml version="1.0" encoding="utf-8"?>
+      <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+        <soap:Body>
+          <CountryCurrency xmlns="http://www.oorsprong.org/websamples.countryinfo">
+            <sCountryISOCode>US</sCountryISOCode>
+          </CountryCurrency>
+        </soap:Body>
+      </soap:Envelope>
+  lr_12_flag_for_a_country:
+    name: "12_flag_for_a_country"
+    method: "POST"
+    url: "http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso"
+    headers:
+      Content-Type: "text/xml; charset=utf-8"
+    payload: |-
+      <?xml version="1.0" encoding="utf-8"?>
+      <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+        <soap:Body>
+          <CountryFlag xmlns="http://www.oorsprong.org/websamples.countryinfo">
+            <sCountryISOCode>US</sCountryISOCode>
+          </CountryFlag>
+        </soap:Body>
+      </soap:Envelope>
+  lr_13_international_phone_code_for_a_country_copy:
+    name: "13_international_phone_code_for_a_country_copy"
+    method: "POST"
+    url: "http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso"
+    headers:
+      Content-Type: "text/xml; charset=utf-8"
+    payload: |-
+      <?xml version="1.0" encoding="utf-8"?>
+      <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+        <soap:Body>
+          <CountryIntPhoneCode xmlns="http://www.oorsprong.org/websamples.countryinfo">
+            <sCountryISOCode>US</sCountryISOCode>
+          </CountryIntPhoneCode>
+        </soap:Body>
+      </soap:Envelope>
+  lr_14_list_of_currencies_by_name:
+    name: "14_list_of_currencies_by_name"
+    method: "POST"
+    url: "http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso"
+    headers:
+      Content-Type: "text/xml; charset=utf-8"
+    payload: |-
+      <?xml version="1.0" encoding="utf-8"?>
+      <soap12:Envelope xmlns:soap12="http://www.w3.org/2003/05/soap-envelope">
+        <soap12:Body>
+          <ListOfCurrenciesByName xmlns="http://www.oorsprong.org/websamples.countryinfo">
+          </ListOfCurrenciesByName>
+        </soap12:Body>
+      </soap12:Envelope>
+  lr_15_list_of_languages_by_name:
+    name: "15_list_of_languages_by_name"
+    method: "POST"
+    url: "http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso"
+    headers:
+      Content-Type: "text/xml; charset=utf-8"
+    payload: |-
+      <?xml version="1.0" encoding="utf-8"?>
+      <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+        <soap:Body>
+          <ListOfLanguagesByName xmlns="http://www.oorsprong.org/websamples.countryinfo">
+          </ListOfLanguagesByName>
+        </soap:Body>
+      </soap:Envelope>
+  lr_16_is_valid_isbn13_number:
+    name: "16_is_valid_isbn13_number"
+    method: "POST"
+    url: "http://webservices.daehosting.com/services/isbnservice.wso"
+    headers:
+      Content-Type: "text/xml; charset=utf-8"
+    payload: |-
+      <?xml version="1.0" encoding="utf-8"?>
+      <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+        <soap:Body>
+          <IsValidISBN13 xmlns="http://webservices.daehosting.com/ISBN">
+            <sISBN>978-1-4612-9090-2</sISBN>
+          </IsValidISBN13>
+        </soap:Body>
+      </soap:Envelope>
+  lr_17_is_valid_isbn10_number:
+    name: "17_is_valid_isbn10_number"
+    method: "POST"
+    url: "http://webservices.daehosting.com/services/isbnservice.wso"
+    headers:
+      Content-Type: "text/xml; charset=utf-8"
+    payload: |-
+      <?xml version="1.0" encoding="utf-8"?>
+      <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+        <soap:Body>
+          <IsValidISBN10 xmlns="http://webservices.daehosting.com/ISBN">
+            <sISBN>0-19-852663-6</sISBN>
+          </IsValidISBN10>
+        </soap:Body>
+      </soap:Envelope>
+  lr_18_celsius_to_farenheit_conversion:
+    name: "18_celsius_to_farenheit_conversion"
+    method: "POST"
+    url: "https://www.w3schools.com/xml/tempconvert.asmx"
+    headers:
+      Content-Type: "application/soap+xml; charset=utf-8"
+    payload: |-
+      <?xml version="1.0" encoding="utf-8"?>
+      <soap12:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope">
+        <soap12:Body>
+          <CelsiusToFahrenheit xmlns="https://www.w3schools.com/xml/">
+            <Celsius>20</Celsius>
+          </CelsiusToFahrenheit>
+        </soap12:Body>
+      </soap12:Envelope>
+  lr_19_farenheit_to_celsius_conversion:
+    name: "19_farenheit_to_celsius_conversion"
+    method: "POST"
+    url: "https://www.w3schools.com/xml/tempconvert.asmx"
+    headers:
+      Content-Type: "application/soap+xml; charset=utf-8"
+    payload: |-
+      <?xml version="1.0" encoding="utf-8"?>
+      <soap12:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope">
+        <soap12:Body>
+          <FahrenheitToCelsius xmlns="https://www.w3schools.com/xml/">
+            <Fahrenheit>75</Fahrenheit>
+          </FahrenheitToCelsius>
+        </soap12:Body>
+      </soap12:Envelope>

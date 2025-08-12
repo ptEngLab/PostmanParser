@@ -1,4 +1,4 @@
-package com.postman.converter.model;
+package com.postman.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
@@ -15,8 +15,4 @@ public class PostmanKeyValue {
     private String description; // optional
     private String src;         // file path if type=file
 
-    // Derived helper method - not serialized
-    public boolean isEnabled() {
-        return !disabled;
-    }
 }

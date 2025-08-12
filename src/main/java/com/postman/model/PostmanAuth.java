@@ -1,4 +1,4 @@
-package com.postman.converter.model;
+package com.postman.model;
 
 import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;

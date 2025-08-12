@@ -1,4 +1,4 @@
-package com.postman.converter.model;
+package com.postman.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;

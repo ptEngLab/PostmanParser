@@ -1,6 +1,7 @@
-package com.postman.converter.model;
+package com.postman.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.postman.util.CommonUtils;
 import lombok.Getter;
 import lombok.Setter;
 import org.apache.commons.collections4.CollectionUtils;
@@ -34,11 +35,11 @@ public class PostmanBody {
     }
 
     public boolean isJsonPayload() {
-        return hasRawPayload() && options != null && options.hasJsonLanguage();
+        return hasRawPayload() && ((options != null && options.hasJsonLanguage()) || CommonUtils.isLikelyJson(getRaw())) ;
     }
 
     public boolean isXmlPayload() {
-        return hasRawPayload() && options != null && options.hasXmlLanguage();
+        return hasRawPayload() && ((options != null && options.hasXmlLanguage()) || CommonUtils.isLikelyXml(getRaw()));
     }
 
     public boolean isTextPayload() {
